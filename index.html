@@ -5,37 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zafiro Farmacias — Convención Brasil 2026</title>
   <link href="https://api.fontshare.com/v2/css?f[]=open-sauce-one@300,400,700,800,900&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'zf-bg':      '#2D3330',
-            'zf-surface': '#3B403D',
-            'zf-card':    '#3D7A6C',
-            'zf-accent':  '#60C3A9',
-            'zf-text':    '#EDF7F4',
-            'zf-muted':   '#8AADA0',
-            'zf-dark':    '#2E5A4D',
-          }
-        }
-      }
-    }
-  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    :root {
+      --zf-bg:      #2D3330;
+      --zf-surface: #3B403D;
+      --zf-card:    #3D7A6C;
+      --zf-accent:  #60C3A9;
+      --zf-text:    #EDF7F4;
+      --zf-muted:   #8AADA0;
+      --zf-dark:    #2E5A4D;
+    }
+    /* backgrounds */
+    .bg-zf-bg      { background-color: var(--zf-bg); }
+    .bg-zf-surface { background-color: var(--zf-surface); }
+    .bg-zf-card    { background-color: var(--zf-card); }
+    .bg-zf-accent  { background-color: var(--zf-accent); }
+    .bg-zf-dark    { background-color: var(--zf-dark); }
+    /* text */
+    .text-zf-bg     { color: var(--zf-bg); }
+    .text-zf-text   { color: var(--zf-text); }
+    .text-zf-accent { color: var(--zf-accent); }
+    .text-zf-muted  { color: var(--zf-muted); }
+    .text-zf-dark   { color: var(--zf-dark); }
+    /* borders */
+    .border-zf-dark   { border-color: var(--zf-dark); }
+    .border-zf-accent { border-color: var(--zf-accent); }
+    /* placeholder */
+    .placeholder-zf-muted::placeholder { color: var(--zf-muted); }
+    /* hover */
+    .hover\:border-zf-accent:hover { border-color: var(--zf-accent); }
+    /* focus */
+    .focus\:border-zf-accent:focus { border-color: var(--zf-accent); }
+    /* font & layout */
     * { font-family: 'Open Sauce One', sans-serif; }
     .s-pad { padding: 8vh 4vw; }
     @media (min-width:640px)  { .s-pad { padding: 10vh 6vw; } }
     @media (min-width:1024px) { .s-pad { padding: 12vh 10vw; } }
-    .h-hero { font-size: clamp(42px,7vw,96px); }
-    .h-xl   { font-size: clamp(32px,4.5vw,64px); }
-    .h-lg   { font-size: clamp(28px,4.5vw,60px); }
-    .h-md   { font-size: clamp(28px,4vw,56px); }
-    .h-sm   { font-size: clamp(24px,4vw,52px); }
-    .h-card { font-size: clamp(28px,3vw,42px); }
-    .h-stat { font-size: clamp(20px,2.5vw,34px); }
-    .h-num  { font-size: clamp(28px,4vw,60px); }
+    .h-hero    { font-size: clamp(42px,7vw,96px); }
+    .h-xl      { font-size: clamp(32px,4.5vw,64px); }
+    .h-lg      { font-size: clamp(28px,4.5vw,60px); }
+    .h-md      { font-size: clamp(28px,4vw,56px); }
+    .h-sm      { font-size: clamp(24px,4vw,52px); }
+    .h-card    { font-size: clamp(28px,3vw,42px); }
+    .h-stat    { font-size: clamp(20px,2.5vw,34px); }
+    .h-num     { font-size: clamp(28px,4vw,60px); }
     .h-numcard { font-size: clamp(36px,4vw,52px); }
     .comment-body { display: none; }
     .comment-body.open { display: block; }
