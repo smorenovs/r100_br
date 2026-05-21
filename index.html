@@ -1,0 +1,681 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zafiro Farmacias — Convención Brasil 2026</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=open-sauce-one@300,400,700,800,900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'zf-bg':      '#2D3330',
+            'zf-surface': '#3B403D',
+            'zf-card':    '#3D7A6C',
+            'zf-accent':  '#60C3A9',
+            'zf-text':    '#EDF7F4',
+            'zf-muted':   '#8AADA0',
+            'zf-dark':    '#2E5A4D',
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * { font-family: 'Open Sauce One', sans-serif; }
+    .s-pad { padding: 8vh 4vw; }
+    @media (min-width:640px)  { .s-pad { padding: 10vh 6vw; } }
+    @media (min-width:1024px) { .s-pad { padding: 12vh 10vw; } }
+    .h-hero { font-size: clamp(42px,7vw,96px); }
+    .h-xl   { font-size: clamp(32px,4.5vw,64px); }
+    .h-lg   { font-size: clamp(28px,4.5vw,60px); }
+    .h-md   { font-size: clamp(28px,4vw,56px); }
+    .h-sm   { font-size: clamp(24px,4vw,52px); }
+    .h-card { font-size: clamp(28px,3vw,42px); }
+    .h-stat { font-size: clamp(20px,2.5vw,34px); }
+    .h-num  { font-size: clamp(28px,4vw,60px); }
+    .h-numcard { font-size: clamp(36px,4vw,52px); }
+    .comment-body { display: none; }
+    .comment-body.open { display: block; }
+  </style>
+</head>
+<body class="bg-zf-bg text-zf-text min-h-screen">
+
+<!-- ── HEADER ─────────────────────────────────────────────────────────────── -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[4vw] lg:px-[10vw] py-3 border-b border-zf-dark/40" style="background:rgba(45,51,48,.85);backdrop-filter:blur(6px)">
+  <div class="flex items-center gap-3">
+    <img src="public/logo.svg" alt="Zafiro" class="h-7 w-auto select-none" draggable="false">
+    <div class="leading-none">
+      <p class="text-zf-accent font-black text-[11px] tracking-[0.18em] uppercase">Zafiro Farmacias</p>
+      <p class="text-zf-muted text-[9px] tracking-[0.14em] uppercase mt-0.5">Sistema de Gestión Farmacéutico</p>
+    </div>
+  </div>
+  <p class="text-zf-muted text-[10px] tracking-widest uppercase hidden sm:block">www.zafirofarmacias.com.ar</p>
+</header>
+
+<div class="pt-[52px]">
+
+<!-- ── HERO ───────────────────────────────────────────────────────────────── -->
+<section class="s-pad relative min-h-screen flex flex-col justify-center">
+  <img src="public/logo_z.svg" alt="" aria-hidden="true" draggable="false"
+    class="absolute right-[6vw] bottom-0 hidden lg:block pointer-events-none select-none"
+    style="width:clamp(240px,44vw,640px);opacity:.12;">
+
+  <h1 class="h-hero font-black uppercase text-zf-accent leading-[0.95] tracking-[-0.02em] max-w-[14ch]">
+    ¿Cuánto tardaste en saber cómo cerró cada sucursal?
+  </h1>
+
+  <div class="mt-10 flex items-center gap-6">
+    <div class="h-px w-12 bg-zf-accent opacity-60"></div>
+    <p class="text-zf-muted text-xs tracking-[0.2em] uppercase">www.zafirofarmacias.com.ar</p>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-zf-dark text-2xl select-none" aria-hidden="true">↓</div>
+</section>
+
+<!-- ── DIVIDER ────────────────────────────────────────────────────────────── -->
+<div class="px-[4vw] sm:px-[6vw] lg:px-[10vw]"><div class="h-px bg-zf-dark"></div></div>
+
+<!-- ── SLIDE 01 / SECTION 02 ──────────────────────────────────────────────── -->
+<section class="s-pad relative" id="s2">
+  <div class="flex flex-col lg:flex-row gap-12 lg:items-center">
+    <div class="flex-1">
+      <h2 class="h-xl font-black uppercase text-zf-accent leading-[0.95] tracking-[-0.02em]">
+        En Argentina, la información que llega tarde ya no sirve
+      </h2>
+      <ul class="mt-8 space-y-4 text-base lg:text-lg leading-[1.75] text-zf-text">
+        <li class="flex gap-3 items-start">
+          <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-zf-accent flex-shrink-0"></span>
+          La inflación cambia el valor de tu stock mientras estás mirando el número de ayer.
+        </li>
+        <li class="flex gap-3 items-start">
+          <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-zf-accent flex-shrink-0"></span>
+          Los plazos de cobro de las obras sociales no esperan a que estés listo para decidir.
+        </li>
+        <li class="flex gap-3 items-start">
+          <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-zf-accent flex-shrink-0"></span>
+          ARCA y ANMAT no dan advertencia. O estás al día, o estás en falta.
+        </li>
+      </ul>
+    </div>
+    <div class="lg:w-[38%] bg-zf-card rounded-xl p-8 flex flex-col gap-4">
+      <p class="h-card font-black uppercase text-zf-accent leading-[0.95] tracking-tight">
+        Este no es trabajo para un sistema genérico
+      </p>
+      <div class="h-px bg-zf-accent opacity-30"></div>
+      <p class="text-zf-text text-sm lg:text-base leading-[1.7]">
+        Zafiro no fue <em>adaptado</em> al rubro farmacéutico. Fue construido para él, desde el día uno.
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-[4vh] space-y-4 text-base lg:text-lg leading-[1.75] text-zf-text">
+    <p>Operar en Argentina no es fácil.</p>
+    <p>La inflación cambia el valor del stock constantemente. Los plazos de cobro de obras sociales son largos, pero los pagos no esperan. ARCA y ANMAT exigen cumplimiento exacto, sin margen de error.</p>
+    <p>En este contexto, quien tarda en tener información, tarda en decidir. Y quien decide tarde, pierde.</p>
+    <p>Zafiro nació para dar respuestas al sector farmacéutico con estas problemáticas.</p>
+  </div>
+
+  <div class="mt-[4vh]">
+    <button onclick="toggleComment(this)" class="w-full flex items-center justify-between border border-dashed border-zf-dark rounded-xl px-5 py-[14px] bg-zf-surface hover:border-zf-accent transition-colors cursor-pointer">
+      <span class="text-zf-accent text-sm lg:text-base">¿Tenés algún comentario sobre esta sección?</span>
+      <span class="text-zf-muted text-lg ml-4 flex-shrink-0">+</span>
+    </button>
+    <div class="comment-body mt-2">
+      <textarea data-section="2" placeholder="Escribí tu observación aquí…" style="font-family:inherit" class="w-full bg-zf-bg border border-zf-dark text-zf-text placeholder-zf-muted rounded-xl px-4 py-3 text-base resize-y min-h-[100px] outline-none focus:border-zf-accent transition-colors"></textarea>
+    </div>
+  </div>
+
+  <span class="absolute bottom-6 left-1/2 -translate-x-1/2 text-zf-dark text-xs tracking-widest font-medium select-none">1/10</span>
+</section>
+
+<div class="px-[4vw] sm:px-[6vw] lg:px-[10vw]"><div class="h-px bg-zf-dark"></div></div>
+
+<!-- ── SLIDE 02 / SECTION 03 ──────────────────────────────────────────────── -->
+<section class="s-pad relative" id="s3">
+  <h2 class="h-lg font-black uppercase text-zf-accent leading-[0.95] tracking-[-0.02em] mb-12">
+    Con Zafiro, cumplís todo.<br class="hidden sm:block">
+    Sin armar un proceso aparte para cada cosa.
+  </h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+    <div class="bg-zf-card rounded-xl p-6 flex flex-col gap-3">
+      <span class="h-numcard font-black text-zf-accent opacity-60 leading-none tracking-tight">01</span>
+      <p class="font-black uppercase text-zf-text text-lg lg:text-xl tracking-wide">ARCA</p>
+      <p class="text-zf-text text-sm lg:text-base leading-[1.7] opacity-80">CAE en el momento. Si ARCA cae, el operador puede cambiar a una caja CAEA para que el punto de venta no se detenga.</p>
+    </div>
+    <div class="bg-zf-card rounded-xl p-6 flex flex-col gap-3">
+      <span class="h-numcard font-black text-zf-accent opacity-60 leading-none tracking-tight">02</span>
+      <p class="font-black uppercase text-zf-text text-lg lg:text-xl tracking-wide">Obras Sociales y PAMI</p>
+      <p class="text-zf-text text-sm lg:text-base leading-[1.7] opacity-80">El cajero no calcula nada. El sistema conoce el convenio y aplica el descuento.</p>
+    </div>
+    <div class="bg-zf-card rounded-xl p-6 flex flex-col gap-3">
+      <span class="h-numcard font-black text-zf-accent opacity-60 leading-none tracking-tight">03</span>
+      <p class="font-black uppercase text-zf-text text-lg lg:text-xl tracking-wide">ANMAT</p>
+      <p class="text-zf-text text-sm lg:text-base leading-[1.7] opacity-80">Trazabilidad integrada. El registro de ingresos y egresos con lector QR está dentro del mismo sistema, sin herramientas separadas, sin reportes manuales a ANMAT desde otro lado.</p>
+    </div>
+    <div class="bg-zf-card rounded-xl p-6 flex flex-col gap-3">
+      <span class="h-numcard font-black text-zf-accent opacity-60 leading-none tracking-tight">04</span>
+      <p class="font-black uppercase text-zf-text text-lg lg:text-xl tracking-wide">Contabilidad</p>
+      <p class="text-zf-text text-sm lg:text-base leading-[1.7] opacity-80">Preasientos por operación, asiento resumen por período. El contador no carga dos veces lo que el sistema ya sabe.</p>
+    </div>
+  </div>
+
+  <div class="mt-[4vh] space-y-4 text-base lg:text-lg leading-[1.75] text-zf-text">
+    <p>Cuando decimos que Zafiro fue construido para la industria farmacéutica, no es un slogan.</p>
+    <p>Está integrado con ARCA: el CAE se genera en el momento. Si el servicio de ARCA falla, el sistema puede operar con CAEA, solo con cambiar de caja.</p>
+    <p>Valida directo con múltiples obras sociales y bonos: los descuentos por convenio se aplican automáticamente en el punto de venta. Sin consultas manuales, sin errores de liquidación.</p>
+    <p>Cuenta con trazabilidad y serialización integradas para cumplir con el SNT sin intervención del equipo. Y la contabilidad está integrada en cada operación. Todo esto viene incluido. No son módulos opcionales. Ya está adentro.</p>
+  </div>
+
+  <div class="mt-[4vh]">
+    <button onclick="toggleComment(this)" class="w-full flex items-center justify-between border border-dashed border-zf-dark rounded-xl px-5 py-[14px] bg-zf-surface hover:border-zf-accent transition-colors cursor-pointer">
+      <span class="text-zf-accent text-sm lg:text-base">¿Tenés algún comentario sobre esta sección?</span>
+      <span class="text-zf-muted text-lg ml-4 flex-shrink-0">+</span>
+    </button>
+    <div class="comment-body mt-2">
+      <textarea data-section="3" placeholder="Escribí tu observación aquí…" style="font-family:inherit" class="w-full bg-zf-bg border border-zf-dark text-zf-text placeholder-zf-muted rounded-xl px-4 py-3 text-base resize-y min-h-[100px] outline-none focus:border-zf-accent transition-colors"></textarea>
+    </div>
+  </div>
+
+  <span class="absolute bottom-6 left-1/2 -translate-x-1/2 text-zf-dark text-xs tracking-widest font-medium select-none">2/10</span>
+</section>
+
+<div class="px-[4vw] sm:px-[6vw] lg:px-[10vw]"><div class="h-px bg-zf-dark"></div></div>
+
+<!-- ── SLIDE 03 / SECTION 04 ──────────────────────────────────────────────── -->
+<section class="s-pad relative" id="s4">
+  <div class="bg-zf-card rounded-2xl overflow-hidden">
+    <div class="flex flex-col lg:flex-row">
+      <div class="lg:w-[45%] p-8 lg:p-12 flex items-center border-b border-zf-dark/30 lg:border-b-0 lg:border-r" style="border-color:rgba(46,90,77,.3)">
+        <h2 class="h-md font-black uppercase text-zf-accent leading-[0.92] tracking-[-0.02em]">
+          Tenés todo en un solo sistema
+        </h2>
+      </div>
+      <div class="flex-1 p-8 lg:p-12">
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <div class="rounded-xl px-4 py-3 flex items-center justify-center" style="background:rgba(45,51,48,.3)"><span class="font-black uppercase text-zf-text tracking-widest text-sm lg:text-base text-center">Compras</span></div>
+          <div class="rounded-xl px-4 py-3 flex items-center justify-center" style="background:rgba(45,51,48,.3)"><span class="font-black uppercase text-zf-text tracking-widest text-sm lg:text-base text-center">Ventas</span></div>
+          <div class="rounded-xl px-4 py-3 flex items-center justify-center" style="background:rgba(45,51,48,.3)"><span class="font-black uppercase text-zf-text tracking-widest text-sm lg:text-base text-center">Stock</span></div>
+          <div class="rounded-xl px-4 py-3 flex items-center justify-center" style="background:rgba(45,51,48,.3)"><span class="font-black uppercase text-zf-text tracking-widest text-sm lg:text-base text-center">Contabilidad</span></div>
+          <div class="rounded-xl px-4 py-3 flex items-center justify-center" style="background:rgba(45,51,48,.3)"><span class="font-black uppercase text-zf-text tracking-widest text-sm lg:text-base text-center">Fondos</span></div>
+          <div class="rounded-xl px-4 py-3 flex items-center justify-center" style="background:rgba(45,51,48,.3)"><span class="font-black uppercase text-zf-text tracking-widest text-sm lg:text-base text-center">Cajas</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-[4vh] space-y-4 text-base lg:text-lg leading-[1.75] text-zf-text">
+    <p>Seis módulos especializados, un solo sistema. Cada uno hace exactamente lo que su nombre indica: Ventas genera ventas, Compras registra comprobantes, Stock gestiona inventario, Contabilidad lleva los libros, Fondos controla el flujo de caja, Cajas registra cada movimiento en el mostrador.</p>
+    <p>Lo que los hace poderosos es que todos comparten los mismos datos en tiempo real. Lo que pasa en Ventas lo sabe Contabilidad. Lo que entra en Compras actualiza Stock. Sin transferencias manuales, sin distintas versiones de la verdad.</p>
+    <p>Podés usar solo los módulos que necesitás. No hay costos adicionales por los que no usás.</p>
+  </div>
+
+  <div class="mt-[4vh]">
+    <button onclick="toggleComment(this)" class="w-full flex items-center justify-between border border-dashed border-zf-dark rounded-xl px-5 py-[14px] bg-zf-surface hover:border-zf-accent transition-colors cursor-pointer">
+      <span class="text-zf-accent text-sm lg:text-base">¿Tenés algún comentario sobre esta sección?</span>
+      <span class="text-zf-muted text-lg ml-4 flex-shrink-0">+</span>
+    </button>
+    <div class="comment-body mt-2">
+      <textarea data-section="4" placeholder="Escribí tu observación aquí…" style="font-family:inherit" class="w-full bg-zf-bg border border-zf-dark text-zf-text placeholder-zf-muted rounded-xl px-4 py-3 text-base resize-y min-h-[100px] outline-none focus:border-zf-accent transition-colors"></textarea>
+    </div>
+  </div>
+
+  <span class="absolute bottom-6 left-1/2 -translate-x-1/2 text-zf-dark text-xs tracking-widest font-medium select-none">3/10</span>
+</section>
+
+<div class="px-[4vw] sm:px-[6vw] lg:px-[10vw]"><div class="h-px bg-zf-dark"></div></div>
+
+<!-- ── SLIDE 04 / SECTION 05 ──────────────────────────────────────────────── -->
+<section class="s-pad relative" id="s5">
+  <div class="flex flex-col lg:flex-row gap-12 lg:items-start">
+    <div class="lg:w-[40%]">
+      <h2 class="h-md font-black uppercase text-zf-accent leading-[0.92] tracking-[-0.02em]">
+        Zafiro BI para que tomes decisiones con calma
+      </h2>
+    </div>
+    <div class="flex-1 flex flex-col gap-5">
+      <div class="bg-zf-surface rounded-xl p-6 border border-zf-dark">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-4 rounded-full bg-zf-dark flex items-center px-0.5">
+            <div class="w-3 h-3 rounded-full bg-zf-muted"></div>
+          </div>
+          <p class="font-black uppercase text-zf-muted tracking-widest text-xs lg:text-sm">Lunes · Sin Zafiro BI</p>
+        </div>
+        <ul class="space-y-1.5 text-base lg:text-lg text-zf-muted leading-[1.7]">
+          <li>7 a.m. — No sabés cómo cerró el fin de semana</li>
+          <li>10 a.m. — Seguís esperando reportes</li>
+          <li>13 a.m. — Llega el reporte de la semana pasada</li>
+        </ul>
+      </div>
+      <div class="bg-zf-card rounded-xl p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-4 rounded-full bg-zf-accent flex items-center justify-end px-0.5">
+            <div class="w-3 h-3 rounded-full bg-zf-bg"></div>
+          </div>
+          <p class="font-black uppercase text-zf-accent tracking-widest text-xs lg:text-sm">Lunes · Con Zafiro BI</p>
+        </div>
+        <p class="text-zf-text text-base lg:text-lg mb-3">7 a.m. — El reporte del período anterior ya está en tu bandeja.</p>
+        <ul class="space-y-1.5 text-base lg:text-lg text-zf-text leading-[1.7]">
+          <li class="flex gap-2"><span class="text-zf-accent">✓</span> Sin incertidumbre</li>
+          <li class="flex gap-2"><span class="text-zf-accent">✓</span> Sin esperar</li>
+          <li class="flex gap-2"><span class="text-zf-accent">✓</span> Con datos precisos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-[4vh] space-y-4 text-base lg:text-lg leading-[1.75] text-zf-text">
+    <p>Si dependés de que vos mismo o alguien más te genere los reportes para poder tomar decisiones, corrés el riesgo de tener tarde la información que necesitás.</p>
+    <p>Con Zafiro BI, ese riesgo desaparece: podés recibir reportes diarios, cada mañana, con información actualizada desde el día anterior, sobre ventas por sucursal, ticket promedio, familias más vendidas, y otros indicadores, sin tener que pedírselo a nadie ni ponerte a armarlo.</p>
+    <p>El valor no está solo en tener el dato. Está en tenerlo antes de que empiece el día, para que las decisiones se tomen con información fresca.</p>
+  </div>
+
+  <div class="mt-[4vh]">
+    <button onclick="toggleComment(this)" class="w-full flex items-center justify-between border border-dashed border-zf-dark rounded-xl px-5 py-[14px] bg-zf-surface hover:border-zf-accent transition-colors cursor-pointer">
+      <span class="text-zf-accent text-sm lg:text-base">¿Tenés algún comentario sobre esta sección?</span>
+      <span class="text-zf-muted text-lg ml-4 flex-shrink-0">+</span>
+    </button>
+    <div class="comment-body mt-2">
+      <textarea data-section="5" placeholder="Escribí tu observación aquí…" style="font-family:inherit" class="w-full bg-zf-bg border border-zf-dark text-zf-text placeholder-zf-muted rounded-xl px-4 py-3 text-base resize-y min-h-[100px] outline-none focus:border-zf-accent transition-colors"></textarea>
+    </div>
+  </div>
+
+  <span class="absolute bottom-6 left-1/2 -translate-x-1/2 text-zf-dark text-xs tracking-widest font-medium select-none">4/10</span>
+</section>
+
+<div class="px-[4vw] sm:px-[6vw] lg:px-[10vw]"><div class="h-px bg-zf-dark"></div></div>
+
+<!-- ── SLIDE 05 / SECTION 06 ──────────────────────────────────────────────── -->
+<section class="s-pad relative" id="s6">
+  <h2 class="h-lg font-black uppercase text-zf-accent leading-[0.92] tracking-[-0.02em] mb-12">
+    Balances contables en minutos
+  </h2>
+
+  <div class="relative">
+    <div class="hidden lg:block absolute top-5 left-0 right-0 h-px bg-zf-accent opacity-30"></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="flex flex-col gap-3">
+        <div class="hidden lg:flex items-center gap-3"><div class="w-3 h-3 rounded-full bg-zf-accent flex-shrink-0 relative z-10"></div></div>
+        <div>
+          <p class="font-black uppercase text-zf-accent text-[21px] lg:text-2xl tracking-wide mb-2">01 — Operaciones diarias</p>
+          <p class="text-zf-text text-[22px] lg:text-[24px] leading-[1.6] opacity-80">Cada módulo va generando datos a medida que se trabaja.</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-3">
+        <div class="hidden lg:flex items-center gap-3"><div class="w-3 h-3 rounded-full bg-zf-accent flex-shrink-0 relative z-10"></div></div>
+        <div>
+          <p class="font-black uppercase text-zf-accent text-[21px] lg:text-2xl tracking-wide mb-2">02 — Pre-asientos</p>
+          <p class="text-zf-text text-[22px] lg:text-[24px] leading-[1.6] opacity-80">Cada operación genera un pre-asiento, simulando el uso de sub-diarios.</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-3">
+        <div class="hidden lg:flex items-center gap-3"><div class="w-3 h-3 rounded-full bg-zf-accent flex-shrink-0 relative z-10"></div></div>
+        <div>
+          <p class="font-black uppercase text-zf-accent text-[21px] lg:text-2xl tracking-wide mb-2">03 — Asientos resumen</p>
+          <p class="text-zf-text text-[22px] lg:text-[24px] leading-[1.6] opacity-80">El libro diario recibe asientos resúmenes por períodos. El contador decide cuándo hacerlos.</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-3">
+        <div class="hidden lg:flex items-center gap-3"><div class="w-3 h-3 rounded-full bg-zf-accent flex-shrink-0 relative z-10"></div></div>
+        <div>
+          <p class="font-black uppercase text-zf-accent text-[21px] lg:text-2xl tracking-wide mb-2">04 — Balances contables</p>
+          <p class="text-zf-text text-[22px] lg:text-[24px] leading-[1.6] opacity-80">Con unos pocos clicks, en formato excel o pdf, cuando el contador lo desee.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-[4vh] space-y-4 text-base lg:text-lg leading-[1.75] text-zf-text">
+    <p>El cierre contable no es el resultado de un proceso tedioso de fin de mes. Es la consecuencia natural de haber operado durante el mes.</p>
+  </div>
+
+  <div class="mt-[4vh]">
+    <button onclick="toggleComment(this)" class="w-full flex items-center justify-between border border-dashed border-zf-dark rounded-xl px-5 py-[14px] bg-zf-surface hover:border-zf-accent transition-colors cursor-pointer">
+      <span class="text-zf-accent text-sm lg:text-base">¿Tenés algún comentario sobre esta sección?</span>
+      <span class="text-zf-muted text-lg ml-4 flex-shrink-0">+</span>
+    </button>
+    <div class="comment-body mt-2">
+      <textarea data-section="6" placeholder="Escribí tu observación aquí…" style="font-family:inherit" class="w-full bg-zf-bg border border-zf-dark text-zf-text placeholder-zf-muted rounded-xl px-4 py-3 text-base resize-y min-h-[100px] outline-none focus:border-zf-accent transition-colors"></textarea>
+    </div>
+  </div>
+
+  <span class="absolute bottom-6 left-1/2 -translate-x-1/2 text-zf-dark text-xs tracking-widest font-medium select-none">5/10</span>
+</section>
+
+<div class="px-[4vw] sm:px-[6vw] lg:px-[10vw]"><div class="h-px bg-zf-dark"></div></div>
+
+<!-- ── SLIDE 06 / SECTION 07 ──────────────────────────────────────────────── -->
+<section class="s-pad relative" id="s7">
+  <h2 class="h-lg font-black uppercase text-zf-accent leading-[0.92] tracking-[-0.02em] mb-12">
+    Comprás mejor cuando el sistema ya analizó qué necesitás
+  </h2>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div class="bg-zf-card rounded-xl p-7">
+      <p class="font-black uppercase text-zf-accent text-xs tracking-[0.22em] mb-6">Modelos de pedido</p>
+      <div class="space-y-5">
+        <div>
+          <p class="font-black uppercase text-zf-text text-base lg:text-lg tracking-wide">Centralizado</p>
+          <p class="text-zf-text text-base leading-[1.7] opacity-80 mt-1">Desde la Central, hacia las Sucursales.</p>
+        </div>
+        <div class="h-px bg-zf-accent opacity-20"></div>
+        <div>
+          <p class="font-black uppercase text-zf-text text-base lg:text-lg tracking-wide">Distribuido</p>
+          <p class="text-zf-text text-base leading-[1.7] opacity-80 mt-1">Pedido desde la Central, entregado por el Proveedor en cada Sucursal.</p>
+        </div>
+        <p class="text-zf-accent text-xs italic">El mismo sistema soporta los dos modelos. Y pueden coexistir.</p>
+      </div>
+    </div>
+    <div class="bg-zf-surface border border-zf-dark rounded-xl overflow-hidden flex flex-col">
+      <div class="px-7 pt-7 pb-4">
+        <p class="font-black uppercase text-zf-accent text-xs tracking-[0.22em] mb-3">Proyección de demanda</p>
+        <p class="text-zf-text text-sm leading-[1.7]">Basado en el historial de ventas, con distinción entre ventas normales y promocionales.</p>
+      </div>
+      <div class="flex-1 overflow-hidden" style="min-height:180px">
+        <img src="public/img_slide_7.jpeg" alt="Análisis de Proyección de Ventas" class="w-full h-full object-cover object-top" draggable="false">
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-[4vh] space-y-4 text-base lg:text-lg leading-[1.75] text-zf-text">
+    <p>Comprar bien no es solo comprar rápido. Es comprar lo correcto, en el momento correcto, con proyecciones basadas en el historial real del propio negocio.</p>
+    <p>Zafiro cuenta con pronósticos por regresión lineal para estimar cómo va a evolucionar la demanda de cada producto, distinguiendo períodos de precio normal de períodos promocionales.</p>
+    <p>Para organizar cómo hacer esos pedidos, el sistema soporta dos modelos: pedidos distribuidos, donde cada sucursal compra según su demanda propia, y pedidos unificados, para aprovechar promociones por volumen. El mismo sistema soporta ambos, y pueden coexistir dentro de una misma empresa.</p>
+  </div>
+
+  <div class="mt-[4vh]">
+    <button onclick="toggleComment(this)" class="w-full flex items-center justify-between border border-dashed border-zf-dark rounded-xl px-5 py-[14px] bg-zf-surface hover:border-zf-accent transition-colors cursor-pointer">
+      <span class="text-zf-accent text-sm lg:text-base">¿Tenés algún comentario sobre esta sección?</span>
+      <span class="text-zf-muted text-lg ml-4 flex-shrink-0">+</span>
+    </button>
+    <div class="comment-body mt-2">
+      <textarea data-section="7" placeholder="Escribí tu observación aquí…" style="font-family:inherit" class="w-full bg-zf-bg border border-zf-dark text-zf-text placeholder-zf-muted rounded-xl px-4 py-3 text-base resize-y min-h-[100px] outline-none focus:border-zf-accent transition-colors"></textarea>
+    </div>
+  </div>
+
+  <span class="absolute bottom-6 left-1/2 -translate-x-1/2 text-zf-dark text-xs tracking-widest font-medium select-none">6/10</span>
+</section>
+
+<div class="px-[4vw] sm:px-[6vw] lg:px-[10vw]"><div class="h-px bg-zf-dark"></div></div>
+
+<!-- ── SLIDE 07 / SECTION 08 ──────────────────────────────────────────────── -->
+<section class="s-pad relative" id="s8">
+  <div class="flex flex-col lg:flex-row gap-12 lg:items-center">
+    <div class="flex-1 flex flex-col gap-8">
+      <h2 class="h-md font-black uppercase text-zf-accent leading-[0.92] tracking-[-0.02em]">
+        Menos trabajo repetitivo,<br class="hidden sm:block">
+        más enfoque en lo valioso
+      </h2>
+      <div class="space-y-3 text-base lg:text-lg leading-[1.75] text-zf-text">
+        <p>El PDF llega. ZIA lo lee, identifica los productos, los precios, los descuentos, y los precarga en el sistema. El encargado revisa, confirma, y listo.</p>
+        <p>Sin tipear. Sin errores de imputación. Sin repetir lo que ya está en el documento.</p>
+      </div>
+      <div class="bg-zf-card rounded-xl px-8 py-6">
+        <p class="h-num font-black uppercase text-zf-accent leading-none tracking-tight">1 semana →</p>
+        <p class="h-num font-black uppercase text-zf-accent leading-none tracking-tight">2 horas</p>
+        <p class="text-zf-text text-xs uppercase tracking-widest mt-3 opacity-70">Historia real · Cliente de Argentina</p>
+      </div>
+    </div>
+    <div class="lg:w-[44%]">
+      <div class="rounded-xl overflow-hidden border border-zf-dark bg-white">
+        <img src="public/img_slide_8.png" alt="ZIA — procesamiento de factura PDF" class="w-full h-auto" draggable="false">
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-[4vh] space-y-4 text-base lg:text-lg leading-[1.75] text-zf-text">
+    <p>El ingreso de facturas de compra es una de las tareas más repetitivas del área de compras: alguien recibe el PDF, lee los datos, los tipea en el sistema, verifica, corrige errores. Esto es lo que ocurre en la mayoría de las empresas, todos los días.</p>
+    <p>ZIA hace esa parte. Lee la factura directamente desde el PDF o desde un escaneo, identifica los productos, los precios, los descuentos, y los precarga en el sistema. El encargado revisa, confirma, y listo.</p>
+    <p>Uno de nuestros clientes pasó de dedicar una semana completa al ingreso de facturas a resolverlo en dos horas. Automatizar lo repetitivo permite que el equipo dedique su tiempo a lo que el sistema no puede hacer por ellos.</p>
+  </div>
+
+  <div class="mt-[4vh]">
+    <button onclick="toggleComment(this)" class="w-full flex items-center justify-between border border-dashed border-zf-dark rounded-xl px-5 py-[14px] bg-zf-surface hover:border-zf-accent transition-colors cursor-pointer">
+      <span class="text-zf-accent text-sm lg:text-base">¿Tenés algún comentario sobre esta sección?</span>
+      <span class="text-zf-muted text-lg ml-4 flex-shrink-0">+</span>
+    </button>
+    <div class="comment-body mt-2">
+      <textarea data-section="8" placeholder="Escribí tu observación aquí…" style="font-family:inherit" class="w-full bg-zf-bg border border-zf-dark text-zf-text placeholder-zf-muted rounded-xl px-4 py-3 text-base resize-y min-h-[100px] outline-none focus:border-zf-accent transition-colors"></textarea>
+    </div>
+  </div>
+
+  <span class="absolute bottom-6 left-1/2 -translate-x-1/2 text-zf-dark text-xs tracking-widest font-medium select-none">7/10</span>
+</section>
+
+<div class="px-[4vw] sm:px-[6vw] lg:px-[10vw]"><div class="h-px bg-zf-dark"></div></div>
+
+<!-- ── SLIDE 08 / SECTION 09 ──────────────────────────────────────────────── -->
+<section class="s-pad relative" id="s9">
+  <h2 class="h-lg font-black uppercase text-zf-accent leading-[0.92] tracking-[-0.02em] mb-4">
+    Conectado con las herramientas que ya usás
+  </h2>
+  <p class="text-zf-accent italic text-base lg:text-xl mb-12 font-light">
+    No reemplazamos lo que ya funciona. Lo conectamos. Los datos fluyen en ambas direcciones.
+  </p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="bg-zf-card rounded-xl px-5 py-4"><p class="font-black uppercase text-zf-text text-base lg:text-lg tracking-tight leading-tight">Mercado Pago</p><p class="text-zf-accent text-xs uppercase tracking-wider mt-2 leading-snug opacity-80">Medios de pago</p></div>
+    <div class="bg-zf-card rounded-xl px-5 py-4"><p class="font-black uppercase text-zf-text text-base lg:text-lg tracking-tight leading-tight">Tiendastic</p><p class="text-zf-accent text-xs uppercase tracking-wider mt-2 leading-snug opacity-80">eCommerce</p></div>
+    <div class="bg-zf-card rounded-xl px-5 py-4"><p class="font-black uppercase text-zf-text text-base lg:text-lg tracking-tight leading-tight">Drubbit</p><p class="text-zf-accent text-xs uppercase tracking-wider mt-2 leading-snug opacity-80">eCommerce</p></div>
+    <div class="bg-zf-card rounded-xl px-5 py-4"><p class="font-black uppercase text-zf-text text-base lg:text-lg tracking-tight leading-tight">Sud</p><p class="text-zf-accent text-xs uppercase tracking-wider mt-2 leading-snug opacity-80">Droguerías / Proveedores</p></div>
+    <div class="bg-zf-card rounded-xl px-5 py-4"><p class="font-black uppercase text-zf-text text-base lg:text-lg tracking-tight leading-tight">WoowUp</p><p class="text-zf-accent text-xs uppercase tracking-wider mt-2 leading-snug opacity-80">CRM</p></div>
+    <div class="bg-zf-card rounded-xl px-5 py-4"><p class="font-black uppercase text-zf-text text-base lg:text-lg tracking-tight leading-tight">WIBI</p><p class="text-zf-accent text-xs uppercase tracking-wider mt-2 leading-snug opacity-80">CRM</p></div>
+    <div class="bg-zf-card rounded-xl px-5 py-4"><p class="font-black uppercase text-zf-text text-base lg:text-lg tracking-tight leading-tight">Akeron</p><p class="text-zf-accent text-xs uppercase tracking-wider mt-2 leading-snug opacity-80">Depósitos y Logística</p></div>
+    <div class="bg-zf-card rounded-xl px-5 py-4"><p class="font-black uppercase text-zf-text text-base lg:text-lg tracking-tight leading-tight">Monroe</p><p class="text-zf-accent text-xs uppercase tracking-wider mt-2 leading-snug opacity-80">Droguerías / Proveedores</p></div>
+    <div class="bg-zf-card rounded-xl px-5 py-4"><p class="font-black uppercase text-zf-text text-base lg:text-lg tracking-tight leading-tight">Colfarma</p><p class="text-zf-accent text-xs uppercase tracking-wider mt-2 leading-snug opacity-80">Servicio de validaciones</p></div>
+    <div class="bg-zf-card rounded-xl px-5 py-4"><p class="font-black uppercase text-zf-text text-base lg:text-lg tracking-tight leading-tight">Farmalink</p><p class="text-zf-accent text-xs uppercase tracking-wider mt-2 leading-snug opacity-80">Servicio de validaciones</p></div>
+    <div class="bg-zf-card rounded-xl px-5 py-4"><p class="font-black uppercase text-zf-text text-base lg:text-lg tracking-tight leading-tight">IMED</p><p class="text-zf-accent text-xs uppercase tracking-wider mt-2 leading-snug opacity-80">Servicio de validaciones</p></div>
+    <div class="bg-zf-card rounded-xl px-5 py-4"><p class="font-black uppercase text-zf-text text-base lg:text-lg tracking-tight leading-tight">Suizo</p><p class="text-zf-accent text-xs uppercase tracking-wider mt-2 leading-snug opacity-80">Droguerías / Proveedores</p></div>
+  </div>
+
+  <p class="mt-8 text-zf-muted text-sm text-center italic">Entre otras, y se sumarán más</p>
+
+  <div class="mt-[4vh] space-y-4 text-base lg:text-lg leading-[1.75] text-zf-text">
+    <p>Zafiro no reemplaza las herramientas que ya funcionan en el negocio. Las conecta.</p>
+    <p>Tenemos integraciones con Mercado Pago, WoowUp, Tiendastic, Drubbit, WIBI, Akeron, Sud, Monroe, Suizo, y validación directa con Colfarma, Farmalink e IMED, entre otras. El ecosistema de integraciones sigue creciendo.</p>
+    <p>Lo importante es que cuando se conecta una herramienta a Zafiro, los datos fluyen en ambas direcciones. Los sistemas se hablan y los datos se centralizan.</p>
+  </div>
+
+  <div class="mt-[4vh]">
+    <button onclick="toggleComment(this)" class="w-full flex items-center justify-between border border-dashed border-zf-dark rounded-xl px-5 py-[14px] bg-zf-surface hover:border-zf-accent transition-colors cursor-pointer">
+      <span class="text-zf-accent text-sm lg:text-base">¿Tenés algún comentario sobre esta sección?</span>
+      <span class="text-zf-muted text-lg ml-4 flex-shrink-0">+</span>
+    </button>
+    <div class="comment-body mt-2">
+      <textarea data-section="9" placeholder="Escribí tu observación aquí…" style="font-family:inherit" class="w-full bg-zf-bg border border-zf-dark text-zf-text placeholder-zf-muted rounded-xl px-4 py-3 text-base resize-y min-h-[100px] outline-none focus:border-zf-accent transition-colors"></textarea>
+    </div>
+  </div>
+
+  <span class="absolute bottom-6 left-1/2 -translate-x-1/2 text-zf-dark text-xs tracking-widest font-medium select-none">8/10</span>
+</section>
+
+<div class="px-[4vw] sm:px-[6vw] lg:px-[10vw]"><div class="h-px bg-zf-dark"></div></div>
+
+<!-- ── SLIDE 09 / SECTION 10 ──────────────────────────────────────────────── -->
+<section class="s-pad relative" id="s10">
+  <h2 class="h-sm font-black uppercase text-zf-accent leading-[0.92] tracking-[-0.02em] mb-12">
+    Sabés lo que PAMI le cubre al afiliado antes de que llegue al mostrador
+  </h2>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div class="bg-zf-surface border border-zf-dark rounded-xl p-7">
+      <p class="font-black uppercase text-zf-muted text-xs tracking-[0.22em] mb-6">Sin Zafiro</p>
+      <div class="space-y-2">
+        <div class="flex items-center gap-3 py-2.5"><span class="text-zf-dark font-black text-sm w-5 text-center">1</span><span class="text-zf-muted text-sm lg:text-base">Afiliado llega</span></div>
+        <div class="h-px bg-zf-dark ml-8"></div>
+        <div class="flex items-center gap-3 py-2.5"><span class="text-zf-dark font-black text-sm w-5 text-center">2</span><span class="text-zf-muted text-sm lg:text-base">Ejecutás validación</span></div>
+        <div class="h-px bg-zf-dark ml-8"></div>
+        <div class="flex items-center gap-3 py-2.5"><span class="text-zf-dark font-black text-sm w-5 text-center">3</span><span class="text-zf-muted text-sm lg:text-base">Ves cobertura</span></div>
+        <div class="h-px bg-zf-dark ml-8"></div>
+        <div class="flex items-center gap-3 py-2.5"><span class="text-zf-dark font-black text-sm w-5 text-center">4</span><span class="text-zf-muted text-sm lg:text-base">Procesás venta</span></div>
+      </div>
+    </div>
+    <div class="bg-zf-card rounded-xl p-7">
+      <p class="font-black uppercase text-zf-accent text-xs tracking-[0.22em] mb-6">Con Zafiro</p>
+      <div class="space-y-2">
+        <div class="flex items-center gap-3 py-2.5"><span class="text-zf-accent font-black text-sm w-5 text-center">1</span><span class="text-zf-text text-sm lg:text-base">Consultás recetas (antes)</span></div>
+        <div class="h-px ml-8" style="background:rgba(96,195,169,.2)"></div>
+        <div class="flex items-center gap-3 py-2.5"><span class="text-zf-accent font-black text-sm w-5 text-center">2</span><span class="text-zf-text text-sm lg:text-base">Afiliado llega</span></div>
+        <div class="h-px ml-8" style="background:rgba(96,195,169,.2)"></div>
+        <div class="flex items-center gap-3 py-2.5"><span class="text-zf-accent font-black text-sm w-5 text-center">3</span><span class="text-zf-text text-sm lg:text-base">Vendés (todo ya validado)</span></div>
+      </div>
+      <p class="text-zf-text text-xs italic mt-6 opacity-70">La integración con PAMI no es un trámite. Es una ventaja comercial.</p>
+    </div>
+  </div>
+
+  <div class="mt-[4vh] space-y-4 text-base lg:text-lg leading-[1.75] text-zf-text">
+    <p>En Zafiro, contamos con una integración de punta a punta con PAMI.</p>
+    <p>Por un lado, la validación integrada: cuando llega un afiliado al mostrador, las recetas disponibles se consultan directamente desde Zafiro, sin salir del sistema, sin ventanas adicionales, sin procesos paralelos.</p>
+    <p>Pero hay algo más valioso todavía: la consulta de recetas sin validación obligatoria. El equipo puede consultar qué recetas tiene disponibles un afiliado antes de que llegue al mostrador. Esto permite tomar decisiones de venta proactivas, y actuar antes de que el cliente tenga que venir a preguntar.</p>
+  </div>
+
+  <div class="mt-[4vh]">
+    <button onclick="toggleComment(this)" class="w-full flex items-center justify-between border border-dashed border-zf-dark rounded-xl px-5 py-[14px] bg-zf-surface hover:border-zf-accent transition-colors cursor-pointer">
+      <span class="text-zf-accent text-sm lg:text-base">¿Tenés algún comentario sobre esta sección?</span>
+      <span class="text-zf-muted text-lg ml-4 flex-shrink-0">+</span>
+    </button>
+    <div class="comment-body mt-2">
+      <textarea data-section="10" placeholder="Escribí tu observación aquí…" style="font-family:inherit" class="w-full bg-zf-bg border border-zf-dark text-zf-text placeholder-zf-muted rounded-xl px-4 py-3 text-base resize-y min-h-[100px] outline-none focus:border-zf-accent transition-colors"></textarea>
+    </div>
+  </div>
+
+  <span class="absolute bottom-6 left-1/2 -translate-x-1/2 text-zf-dark text-xs tracking-widest font-medium select-none">9/10</span>
+</section>
+
+<div class="px-[4vw] sm:px-[6vw] lg:px-[10vw]"><div class="h-px bg-zf-dark"></div></div>
+
+<!-- ── SLIDE 10 / SECTION 11 ──────────────────────────────────────────────── -->
+<section class="s-pad relative" id="s11">
+  <div class="flex flex-col lg:flex-row gap-12 lg:items-start">
+    <div class="lg:w-[45%] flex flex-col gap-8">
+      <h2 class="h-lg font-black uppercase text-zf-accent leading-[0.92] tracking-[-0.02em]">
+        El mismo sistema, sin importar cuánto crezca el negocio
+      </h2>
+      <ul class="space-y-3 text-base lg:text-lg leading-[1.75] text-zf-text">
+        <li class="flex gap-3 items-start"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-zf-accent flex-shrink-0"></span>Sin migración cuando abran la próxima sucursal.</li>
+        <li class="flex gap-3 items-start"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-zf-accent flex-shrink-0"></span>Sin empezar de cero cuando el negocio cambie.</li>
+        <li class="flex gap-3 items-start"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-zf-accent flex-shrink-0"></span>Todas tus operaciones, centralizadas en un solo sistema.</li>
+      </ul>
+    </div>
+    <div class="flex-1 flex flex-col gap-4">
+      <div class="rounded-xl overflow-hidden border border-zf-dark flex items-center justify-center p-8" style="background:rgba(255,255,255,.05);min-height:220px">
+        <img src="public/img_slide_11.png" alt="Zafiro — escalabilidad multisucursal" class="w-full h-auto object-contain" style="max-width:400px" draggable="false">
+      </div>
+      <div class="grid grid-cols-3 gap-3">
+        <div class="bg-zf-surface border border-zf-dark rounded-xl px-4 py-4">
+          <p class="h-stat font-black text-zf-accent leading-none tracking-tight">+30</p>
+          <p class="text-zf-muted text-xs uppercase tracking-widest mt-2">Sucursales</p>
+        </div>
+        <div class="bg-zf-surface border border-zf-dark rounded-xl px-4 py-4">
+          <p class="h-stat font-black text-zf-accent leading-none tracking-tight">500+</p>
+          <p class="text-zf-muted text-xs uppercase tracking-widest mt-2">Puestos conectados</p>
+        </div>
+        <div class="bg-zf-surface border border-zf-dark rounded-xl px-4 py-4">
+          <p class="h-stat font-black text-zf-accent leading-none tracking-tight">+8.5M</p>
+          <p class="text-zf-muted text-xs uppercase tracking-widest mt-2">Operaciones registradas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-[4vh] space-y-4 text-base lg:text-lg leading-[1.75] text-zf-text">
+    <p>Zafiro acompaña el crecimiento sin que el negocio tenga que cambiar de plataforma.</p>
+    <p>Hoy pueden estar operando con una sucursal y diez puestos. Mañana pueden tener treinta sucursales y quinientos puestos conectados. El sistema es el mismo. No hay migración, no hay reinicio, no hay pérdida de historia operativa.</p>
+    <p>Y cuando cambia la normativa de ARCA, cuando se lanza una nueva funcionalidad, cuando hay una actualización regulatoria, el sistema se actualiza. Eso no es un servicio adicional ni genera costos adicionales. Nuestro compromiso es mantenerlos al día, cuanto antes, con cada cambio que sea necesario.</p>
+  </div>
+
+  <div class="mt-[4vh]">
+    <button onclick="toggleComment(this)" class="w-full flex items-center justify-between border border-dashed border-zf-dark rounded-xl px-5 py-[14px] bg-zf-surface hover:border-zf-accent transition-colors cursor-pointer">
+      <span class="text-zf-accent text-sm lg:text-base">¿Tenés algún comentario sobre esta sección?</span>
+      <span class="text-zf-muted text-lg ml-4 flex-shrink-0">+</span>
+    </button>
+    <div class="comment-body mt-2">
+      <textarea data-section="11" placeholder="Escribí tu observación aquí…" style="font-family:inherit" class="w-full bg-zf-bg border border-zf-dark text-zf-text placeholder-zf-muted rounded-xl px-4 py-3 text-base resize-y min-h-[100px] outline-none focus:border-zf-accent transition-colors"></textarea>
+    </div>
+  </div>
+
+  <span class="absolute bottom-6 left-1/2 -translate-x-1/2 text-zf-dark text-xs tracking-widest font-medium select-none">10/10</span>
+</section>
+
+<!-- ── CLOSING ─────────────────────────────────────────────────────────────── -->
+<section class="s-pad" id="closing">
+  <div class="max-w-2xl">
+    <h2 class="h-lg font-black uppercase text-zf-accent leading-[0.92] tracking-[-0.02em] mb-10">
+      ¿Algo de lo que viste merece una conversación?
+    </h2>
+
+    <div class="bg-zf-surface border border-zf-dark rounded-xl p-6 mb-8 space-y-2 text-sm text-zf-muted leading-[1.7]">
+      <p>Al presionar el botón se abrirá WhatsApp con un mensaje que incluye todos los comentarios que hayas dejado en cada sección.</p>
+      <p>Si no dejaste ninguno, se enviará un mensaje de contacto genérico.</p>
+      <p class="text-zf-accent font-medium">El botón debe ser presionado para que el mensaje se envíe.</p>
+    </div>
+
+    <button onclick="sendWhatsApp()" class="inline-flex items-center gap-3 bg-zf-accent text-zf-bg font-black uppercase tracking-widest text-sm lg:text-base px-8 py-4 rounded-xl hover:opacity-90 transition-opacity cursor-pointer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Enviar mis notas
+    </button>
+  </div>
+
+  <div class="mt-16 flex items-center gap-4">
+    <img src="public/logo.svg" alt="Zafiro" class="h-8 w-auto select-none opacity-40" draggable="false">
+    <p class="text-zf-muted text-xs tracking-widest uppercase">www.zafirofarmacias.com.ar</p>
+  </div>
+</section>
+
+</div><!-- /pt-[52px] -->
+
+<script>
+  function toggleComment(btn) {
+    const body = btn.nextElementSibling;
+    const isOpen = body.classList.contains('open');
+    body.classList.toggle('open');
+    btn.querySelector('span:last-child').textContent = isOpen ? '+' : '−';
+  }
+
+  const SECTION_TITLES = {
+    2:  "En Argentina, quien decide tarde, pierde",
+    3:  "Todo lo que el rubro exige, Zafiro ya lo tiene",
+    4:  "Seis módulos, un solo sistema",
+    5:  "El gerente ve todo el negocio antes del desayuno",
+    6:  "El balance ya está hecho cuando el contador lo necesita",
+    7:  "Comprás mejor cuando el sistema ya analizó qué necesitás",
+    8:  "Menos tiempo en lo repetitivo. Más tiempo en lo que importa.",
+    9:  "Conectado con las herramientas que ya usás",
+    10: "Zafiro sabe lo que PAMI cubre antes de que llegue al afiliado",
+    11: "El mismo sistema cuando sean el doble de grandes",
+  };
+
+  function sendWhatsApp() {
+    const WA = "5493835437049";
+    const textareas = document.querySelectorAll('textarea[data-section]');
+    const entries = [];
+    textareas.forEach(ta => {
+      if (ta.value && ta.value.trim()) {
+        entries.push({ id: Number(ta.dataset.section), value: ta.value.trim() });
+      }
+    });
+    entries.sort((a, b) => a.id - b.id);
+
+    let text;
+    if (entries.length === 0) {
+      text = "Hola, me interesa conocer más sobre Zafiro.";
+    } else {
+      const lines = ["Observaciones — Presentación Zafiro Brasil 2026", ""];
+      entries.forEach(({ id, value }) => {
+        lines.push(`*Sección ${id} — ${SECTION_TITLES[id] ?? ""}*`);
+        lines.push(value);
+        lines.push("");
+      });
+      lines.push("---");
+      lines.push("Enviado desde la presentación web.");
+      text = lines.join("\n");
+    }
+    window.open(`https://wa.me/${WA}?text=${encodeURIComponent(text)}`, '_blank');
+  }
+</script>
+
+</body>
+</html>
