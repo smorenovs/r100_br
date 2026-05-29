@@ -1,8 +1,7 @@
+@import url("https://fonts.cdnfonts.com/css/open-sauce-one");
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-
-@import url("https://fonts.cdnfonts.com/css/open-sauce-one");
 
 @theme {
   --color-zafiro-bg: #2D3330;
