@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   Collapsible,
   CollapsibleContent,
@@ -15,9 +15,15 @@ interface CommentFieldProps {
 
 export function CommentField({ sectionId, value, onChange }: CommentFieldProps) {
   const [open, setOpen] = useState(false);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  const handleOpenChange = (next: boolean) => {
+    setOpen(next);
+    if (next) setTimeout(() => textareaRef.current?.focus(), 150);
+  };
 
   return (
-    <Collapsible open={open} onOpenChange={setOpen} className="mt-[4vh]">
+    <Collapsible open={open} onOpenChange={handleOpenChange} className="mt-[4vh]">
       <CollapsibleTrigger asChild>
         <button
           type="button"
@@ -34,6 +40,7 @@ export function CommentField({ sectionId, value, onChange }: CommentFieldProps) 
 
       <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
         <Textarea
+          ref={textareaRef}
           id={`comment-${sectionId}`}
           value={value}
           onChange={(e) => onChange(e.target.value)}

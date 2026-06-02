@@ -13,13 +13,13 @@ const items = [
   },
   {
     num: "02",
-    label: "Obras Sociales y PAMI",
+    label: "Obras Sociales",
     desc: "El cajero no calcula nada. El sistema conoce el convenio y aplica el descuento.",
   },
   {
     num: "03",
     label: "ANMAT",
-    desc: "Trazabilidad integrada. El registro de ingresos y egresos con lector QR está dentro del mismo sistema — sin herramientas separadas, sin reportes manuales a ANMAT desde otro lado.",
+    desc: "Trazabilidad integrada. El registro de ingresos y egresos con lector QR está dentro del mismo sistema. Sin herramientas separadas, sin reportes manuales desde otro lado.",
   },
   {
     num: "04",
@@ -30,11 +30,11 @@ const items = [
 
 export function Section03({ commentValue, onCommentChange }: SectionProps) {
   return (
-    <SectionWrapper id="section-3" slideNum="2/10">
-      <h2 className="font-black uppercase text-zafiro-accent leading-[0.95] tracking-[-0.02em] text-[clamp(28px,4.5vw,60px)] mb-12">
+    <SectionWrapper id="section-3">
+      <h2 className="font-black uppercase text-zafiro-accent leading-[1.05] tracking-[-0.02em] text-[clamp(28px,4.5vw,60px)] mb-12">
         Con Zafiro, cumplís todo.{" "}
         <br className="hidden sm:block" />
-        Sin armar un proceso aparte para cada cosa.
+        Sin procesos externos para cada cosa.
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -54,10 +54,7 @@ export function Section03({ commentValue, onCommentChange }: SectionProps) {
       </div>
 
       <ScriptText>
-        <p>Cuando decimos que Zafiro fue construido para la industria farmacéutica, no es un slogan.</p>
-        <p>Está integrado con ARCA: el CAE se genera en el momento. Si el servicio de ARCA falla, el sistema puede operar con CAEA, solo con cambiar de caja.</p>
-        <p>Valida directo con múltiples obras sociales y bonos: los descuentos por convenio se aplican automáticamente en el punto de venta. Sin consultas manuales, sin errores de liquidación.</p>
-        <p>Cuenta con trazabilidad y serialización integradas para cumplir con el SNT sin intervención del equipo. Y la contabilidad está integrada en cada operación. Todo esto viene incluido. No son módulos opcionales. Ya está adentro.</p>
+        <p>Todo esto ya viene integrado en Zafiro. No tenes que hacer nada extra, ninguna configuración, ni costos adicionales. Es lo indispensable para que tu farmacia pueda funcionar como debe.</p>
       </ScriptText>
 
       <CommentField sectionId={3} value={commentValue} onChange={onCommentChange} />

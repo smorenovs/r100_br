@@ -7,16 +7,16 @@ interface SectionProps {
 
 export function Section05({ commentValue, onCommentChange }: SectionProps) {
   return (
-    <SectionWrapper id="section-5" slideNum="4/10">
+    <SectionWrapper id="section-5">
       <div className="flex flex-col lg:flex-row gap-12 lg:items-start">
 
         <div className="lg:w-[40%]">
-          <h2 className="font-black uppercase text-zafiro-accent leading-[0.92] tracking-[-0.02em] text-[clamp(30px,4vw,58px)]">
+          <h2 className="font-black uppercase text-zafiro-accent leading-[1.05] tracking-[-0.02em] text-[clamp(30px,4vw,58px)]">
             Zafiro BI para que tomes decisiones con calma
           </h2>
         </div>
 
-        <div className="flex-1 flex flex-col gap-5">
+        <div className="flex-1 flex flex-col-2 gap-5">
           {/* Sin Zafiro BI */}
           <div className="bg-zafiro-surface rounded-xl p-6 border border-zafiro-dark">
             <div className="flex items-center gap-3 mb-4">
@@ -45,7 +45,7 @@ export function Section05({ commentValue, onCommentChange }: SectionProps) {
               </p>
             </div>
             <p className="text-zafiro-text text-base lg:text-lg mb-3">
-              7 a.m. — El reporte del período anterior ya está en tu bandeja.
+              7 a.m. — El reporte del día anterior llega a tu bandeja.
             </p>
             <ul className="space-y-1.5 text-base lg:text-lg text-zafiro-text leading-[1.7]">
               <li className="flex gap-2"><span className="text-zafiro-accent">✓</span> Sin incertidumbre</li>

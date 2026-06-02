@@ -7,15 +7,15 @@ interface SectionProps {
 
 export function Section07({ commentValue, onCommentChange }: SectionProps) {
   return (
-    <SectionWrapper id="section-7" slideNum="6/10">
-      <h2 className="font-black uppercase text-zafiro-accent leading-[0.92] tracking-[-0.02em] text-[clamp(28px,4.5vw,60px)] mb-12">
-        Comprás mejor cuando el sistema ya analizó qué necesitás
+    <SectionWrapper id="section-7">
+      <h2 className="font-black uppercase text-zafiro-accent leading-[1.05] tracking-[-0.02em] text-[clamp(28px,4.5vw,60px)] mb-12">
+        Comprás mejor cuando tenes información útil a tu disposición
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Modelos de pedido */}
         <div className="bg-zafiro-card rounded-xl p-7">
-          <p className="font-black uppercase text-zafiro-accent text-xs tracking-[0.22em] mb-6">
+          <p className="font-black uppercase text-zafiro-accent text-xl tracking-[0.22em] mb-6">
             Modelos de pedido
           </p>
           <div className="space-y-5">
@@ -36,7 +36,8 @@ export function Section07({ commentValue, onCommentChange }: SectionProps) {
                 Pedido desde la Central, entregado por el Proveedor en cada Sucursal.
               </p>
             </div>
-            <p className="text-zafiro-accent text-xs italic">
+            <div className="h-px bg-zafiro-accent opacity-20" />
+            <p className="text-zafiro-accent text-m italic">
               El mismo sistema soporta los dos modelos. Y pueden coexistir.
             </p>
           </div>
@@ -45,17 +46,17 @@ export function Section07({ commentValue, onCommentChange }: SectionProps) {
         {/* Proyección de demanda con imagen */}
         <div className="bg-zafiro-surface border border-zafiro-dark rounded-xl overflow-hidden flex flex-col">
           <div className="px-7 pt-7 pb-4">
-            <p className="font-black uppercase text-zafiro-accent text-xs tracking-[0.22em] mb-3">
+            <p className="font-black uppercase text-zafiro-accent text-xl tracking-[0.22em] mb-3">
               Proyección de demanda
             </p>
-            <p className="text-zafiro-text text-sm leading-[1.7]">
+            <p className="text-zafiro-text text-md leading-[1.7]">
               Basado en el historial de ventas, con distinción entre ventas normales y promocionales.
             </p>
           </div>
           {/* Pantalla real de Zafiro — Análisis de Proyección de Ventas */}
           <div className="flex-1 overflow-hidden min-h-[180px] lg:min-h-[220px] rounded-b-xl">
             <img
-              src="/img_slide_7.jpeg"
+              src="/img_slide_7.jpg"
               alt="Análisis de Proyección de Ventas — Zafiro"
               className="w-full h-full object-cover object-top"
               draggable={false}

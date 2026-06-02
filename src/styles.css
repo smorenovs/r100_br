@@ -145,6 +145,17 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+.theme-light {
+  --color-zafiro-bg: #FFFFFF;
+  --color-zafiro-surface: #F0FAF8;
+  --color-zafiro-card: #E8F7F4;
+  --color-zafiro-card-muted: #C8E8E3;
+  --color-zafiro-text: #1A2A27;
+  --color-zafiro-muted: #4A6D65;
+  --color-zafiro-accent: #00B4A0;
+  --color-zafiro-dark: #9BBFB9;
+}
+
 @keyframes collapsible-down {
   from { height: 0; opacity: 0; }
   to { height: var(--radix-collapsible-content-height); opacity: 1; }

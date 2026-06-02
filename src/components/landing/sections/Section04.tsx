@@ -9,11 +9,11 @@ const modules = ["Compras", "Ventas", "Stock", "Contabilidad", "Fondos", "Cajas"
 
 export function Section04({ commentValue, onCommentChange }: SectionProps) {
   return (
-    <SectionWrapper id="section-4" slideNum="3/10">
+    <SectionWrapper id="section-4">
       <div className="bg-zafiro-card rounded-2xl overflow-hidden">
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-[45%] p-8 lg:p-12 flex items-center border-b border-zafiro-dark/30 lg:border-b-0 lg:border-r">
-            <h2 className="font-black uppercase text-zafiro-accent leading-[0.92] tracking-[-0.02em] text-[clamp(32px,4vw,56px)]">
+            <h2 className="font-black uppercase text-zafiro-accent leading-[1.05] tracking-[-0.02em] text-[clamp(32px,4vw,56px)]">
               Tenés todo en un solo sistema
             </h2>
           </div>
@@ -40,7 +40,7 @@ export function Section04({ commentValue, onCommentChange }: SectionProps) {
           Lo que los hace poderosos es que todos comparten los mismos datos en tiempo real. Lo que pasa en Ventas lo sabe Contabilidad. Lo que entra en Compras actualiza Stock. Sin transferencias manuales, sin distintas versiones de la verdad.
         </p>
         <p>
-          Podés usar solo los módulos que necesitás. No hay costos adicionales por los que no usás.
+          Podés usar solo los módulos que necesitás. No hay costos generados por lo que no se usa.
         </p>
       </div>
 

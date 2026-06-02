@@ -6,5 +6,4 @@ export { Section06 } from "./Section06";
 export { Section07 } from "./Section07";
 export { Section08 } from "./Section08";
 export { Section09 } from "./Section09";
-export { Section10 } from "./Section10";
 export { Section11 } from "./Section11";

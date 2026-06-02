@@ -7,15 +7,15 @@ interface SectionProps {
 
 const steps = [
   { label: "Operaciones diarias", desc: "Cada módulo va generando datos a medida que se trabaja." },
-  { label: "Pre-asientos", desc: "Cada operación genera un pre-asiento, simulando el uso de sub-diarios." },
-  { label: "Asientos resumen", desc: "El libro diario recibe asientos resúmenes por períodos. El contador decide cuándo hacerlos." },
+  { label: "Pre-asientos por operación", desc: "Simulando el uso de sub-diarios, con trazabilidad en cada movimiento." },
+  { label: "Asientos resumen por período", desc: "Enviados directo al Libro Diario. El contador decide cuándo hacerlos." },
   { label: "Balances contables", desc: "Con unos pocos clicks, en formato excel o pdf, cuando el contador lo desee." },
 ];
 
 export function Section06({ commentValue, onCommentChange }: SectionProps) {
   return (
-    <SectionWrapper id="section-6" slideNum="5/10">
-      <h2 className="font-black uppercase text-zafiro-accent leading-[0.92] tracking-[-0.02em] text-[clamp(28px,4.5vw,60px)] mb-12">
+    <SectionWrapper id="section-6">
+      <h2 className="font-black uppercase text-zafiro-accent leading-[1.05] tracking-[-0.02em] text-[clamp(28px,4.5vw,60px)] mb-12">
         Balances contables en minutos
       </h2>
 

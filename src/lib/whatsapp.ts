@@ -1,16 +1,15 @@
 import type { CommentsState } from "@/types";
 
 const SECTION_TITLES: Record<number, string> = {
-  2:  "En Argentina, quien decide tarde, pierde",
-  3:  "Todo lo que el rubro exige, Zafiro ya lo tiene",
-  4:  "Seis módulos, un solo sistema",
-  5:  "El gerente ve todo el negocio antes del desayuno",
-  6:  "El balance ya está hecho cuando el contador lo necesita",
-  7:  "Comprás mejor cuando el sistema ya analizó qué necesitás",
-  8:  "Menos tiempo en lo repetitivo. Más tiempo en lo que importa.",
+  2:  "Decidir bien no es difícil. Lo difícil es tener la información a tiempo.",
+  3:  "Con Zafiro, cumplís todo. Sin armar un proceso aparte para cada cosa.",
+  4:  "Tenés todo en un solo sistema",
+  5:  "Zafiro BI para que tomes decisiones con calma",
+  6:  "Balances contables en minutos",
+  7:  "Comprás mejor cuando tenés información útil a tu disposición",
+  8:  "Menos trabajo repetitivo, más enfoque en lo valioso",
   9:  "Conectado con las herramientas que ya usás",
-  10: "Zafiro sabe lo que PAMI cubre antes de que llegue al afiliado",
-  11: "El mismo sistema cuando sean el doble de grandes",
+  11: "El mismo sistema, sin importar cuánto crezca el negocio",
 };
 
 const WHATSAPP_NUMBER = "5493835437049";

@@ -7,12 +7,12 @@ interface SectionProps {
 
 export function Section02({ commentValue, onCommentChange }: SectionProps) {
   return (
-    <SectionWrapper id="section-2" slideNum="1/10">
+    <SectionWrapper id="section-2">
       <div className="flex flex-col lg:flex-row gap-12 lg:items-center">
 
         <div className="flex-1 relative">
-          <h2 className="font-black uppercase text-zafiro-accent leading-[0.95] tracking-[-0.02em] text-[clamp(32px,4.5vw,64px)] relative z-10">
-            En Argentina, la información que llega tarde ya no sirve
+          <h2 className="font-black uppercase text-zafiro-accent leading-[1.05] tracking-[-0.02em] text-[clamp(32px,4.5vw,64px)] relative z-10">
+            Decidir bien no es difícil. Lo difícil es tener la información a tiempo.
           </h2>
 
           <ul className="mt-8 space-y-4 text-base lg:text-lg leading-[1.75] text-zafiro-text relative z-10">
@@ -22,11 +22,11 @@ export function Section02({ commentValue, onCommentChange }: SectionProps) {
             </li>
             <li className="flex gap-3 items-start">
               <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-zafiro-accent flex-shrink-0" />
-              Los plazos de cobro de las obras sociales no esperan a que estés listo para decidir.
+              Con obras sociales, necesitás saber exactamente cuánto te deben y cuándo, antes de que sea tarde para actuar.
             </li>
             <li className="flex gap-3 items-start">
               <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-zafiro-accent flex-shrink-0" />
-              ARCA y ANMAT no dan advertencia. O estás al día, o estás en falta.
+              ARCA y ANMAT no avisan. Si no tenés la trazabilidad al día, lo sabés cuando ya es tarde.
             </li>
           </ul>
         </div>
@@ -43,10 +43,7 @@ export function Section02({ commentValue, onCommentChange }: SectionProps) {
       </div>
 
       <ScriptText>
-        <p>Operar en Argentina no es fácil.</p>
-        <p>La inflación cambia el valor del stock constantemente. Los plazos de cobro de obras sociales son largos, pero los pagos no esperan. ARCA y ANMAT exigen cumplimiento exacto, sin margen de error.</p>
-        <p>En este contexto, quien tarda en tener información, tarda en decidir. Y quien decide tarde, pierde.</p>
-        <p>Zafiro nació para dar respuestas al sector farmacéutico con estas problemáticas.</p>
+        <p>Estos problemas tienen algo en común: la información para resolverlos ya existe dentro de la operación. El problema es cuándo llegás a tenerla.</p>
       </ScriptText>
 
       <CommentField sectionId={2} value={commentValue} onChange={onCommentChange} />

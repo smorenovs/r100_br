@@ -15,6 +15,8 @@ interface SectionClosingProps {
 }
 
 export function SectionClosing({ comments }: SectionClosingProps) {
+  const hasComments = Object.values(comments).some((v) => v && v.trim().length > 0);
+
   const handleSend = () => {
     const url = buildWhatsAppUrl(comments);
     window.open(url, "_blank", "noopener,noreferrer");
@@ -41,7 +43,7 @@ export function SectionClosing({ comments }: SectionClosingProps) {
       <div className="flex items-center gap-2 justify-center mb-10 bg-zafiro-surface border border-zafiro-dark rounded-xl px-5 py-3 max-w-[44ch] mx-auto">
         <WhatsAppIcon />
         <p className="text-zafiro-text text-sm leading-snug text-left">
-          <strong>Importante:</strong> tus notas solo llegan si presionás "Enviar mis notas". Si solo las escribiste en la página, el equipo no las va a ver.
+          <strong>Importante:</strong> Tus notas solo llegan si presionás "Enviar mis notas". Si solo las escribiste en la página, el equipo no las va a ver.
         </p>
       </div>
 
@@ -51,7 +53,7 @@ export function SectionClosing({ comments }: SectionClosingProps) {
         className="flex items-center gap-3 bg-[#25D366] text-white font-black uppercase tracking-wider rounded-full px-8 py-4 lg:px-10 lg:py-[18px] text-sm lg:text-base min-h-[52px] hover:opacity-90 active:opacity-80 transition-opacity duration-150 mx-auto cursor-pointer"
       >
         <WhatsAppIcon />
-        Enviar mis notas
+        {hasComments ? "Enviar mis notas" : "Quiero que me contacten"}
       </button>
 
       <p className="text-zafiro-dark text-xs mt-6 uppercase tracking-widest">
