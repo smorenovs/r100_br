@@ -5,43 +5,32 @@ interface SectionProps {
   onCommentChange: (v: string) => void;
 }
 
-const modules = ["Compras", "Ventas", "Stock", "Contabilidad", "Fondos", "Cajas"];
+const modules = [
+  { name: "Ventas", desc: "Control inteligente del mostrador, con gestión integrada de Obras Sociales, Cuentas Corrientes, Descuentos y Promociones." },
+  { name: "Cajas", desc: "Registro de ingresos y egresos, con cierre de caja controlados, integrados con la caja general de tesorería." },
+  { name: "Stock", desc: "Control de stock en tiempo real. Inventarios físicos y teóricos. Reposición diaria centralizada con proyección de demanda." },
+  { name: "Compras", desc: "Gestión de proveedores. Control de recepción de compras." },
+  { name: "Contabilidad", desc: "Libro diario, mayor y balances. Control de impuestos. Gestión de cuentas por pagar y cobrar." },
+  { name: "Fondos", desc: "Gestión de cuentas bancarias." },
+];
 
 export function Section04({ commentValue, onCommentChange }: SectionProps) {
   return (
     <SectionWrapper id="section-4">
-      <div className="bg-zafiro-card rounded-2xl overflow-hidden">
-        <div className="flex flex-col lg:flex-row">
-          <div className="lg:w-[45%] p-8 lg:p-12 flex items-center border-b border-zafiro-dark/30 lg:border-b-0 lg:border-r">
-            <h2 className="font-black uppercase text-zafiro-accent leading-[1.05] tracking-[-0.02em] text-[clamp(32px,4vw,56px)]">
-              Tenés todo en un solo sistema
-            </h2>
-          </div>
+      <h2 className="font-black uppercase text-zafiro-accent leading-[1.05] tracking-[-0.02em] text-[clamp(28px,4.5vw,60px)] mb-4">
+        Zafiro Farmacias es el ERP especializado en gestión farmacéutica
+      </h2>
+      <p className="text-zafiro-accent italic text-base lg:text-xl mb-12 font-light">
+        Todo tu negocio en una sola plataforma, con datos en tiempo real. Multiempresa y multisucursal.
+      </p>
 
-          <div className="flex-1 p-8 lg:p-12">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {modules.map((m) => (
-                <div key={m} className="bg-zafiro-bg/30 rounded-xl px-4 py-3 flex items-center justify-center">
-                  <span className="font-black uppercase text-zafiro-text tracking-widest text-sm lg:text-base text-center">
-                    {m}
-                  </span>
-                </div>
-              ))}
-            </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {modules.map(({ name, desc }) => (
+          <div key={name} className="bg-zafiro-card rounded-xl px-5 py-4">
+            <p className="font-black uppercase text-zafiro-accent text-base lg:text-lg tracking-wide mb-2">{name}</p>
+            <p className="text-zafiro-text text-sm lg:text-base leading-[1.7] opacity-80">{desc}</p>
           </div>
-        </div>
-      </div>
-
-      <div className="mt-[4vh] space-y-4 text-base lg:text-lg leading-[1.75] text-zafiro-text">
-        <p>
-          Seis módulos especializados, un solo sistema. Cada uno hace exactamente lo que su nombre indica: Ventas genera ventas, Compras registra comprobantes, Stock gestiona inventario, Contabilidad lleva los libros, Fondos controla el flujo de caja, Cajas registra cada movimiento en el mostrador.
-        </p>
-        <p>
-          Lo que los hace poderosos es que todos comparten los mismos datos en tiempo real. Lo que pasa en Ventas lo sabe Contabilidad. Lo que entra en Compras actualiza Stock. Sin transferencias manuales, sin distintas versiones de la verdad.
-        </p>
-        <p>
-          Podés usar solo los módulos que necesitás. No hay costos generados por lo que no se usa.
-        </p>
+        ))}
       </div>
 
       <CommentField sectionId={4} value={commentValue} onChange={onCommentChange} />

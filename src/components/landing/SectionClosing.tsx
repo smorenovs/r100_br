@@ -31,13 +31,25 @@ export function SectionClosing({ comments }: SectionClosingProps) {
         draggable={false}
       />
 
-      <h2 className="font-black uppercase text-zafiro-accent leading-[0.92] tracking-[-0.02em] text-[clamp(28px,4vw,54px)] max-w-[14ch] mb-6 mx-auto">
-        ¿Algo de lo que viste merece una conversación?
+      <h2 className="font-black uppercase text-zafiro-accent leading-[0.92] tracking-[-0.02em] text-[clamp(22px,3.5vw,46px)] max-w-[24ch] mb-8 mx-auto">
+        Más de 25 años comprometidos con la excelencia en gestión farmacéutica
       </h2>
 
-      <p className="text-zafiro-muted text-base lg:text-lg leading-[1.7] max-w-[44ch] mb-4 mx-auto">
-        Si alguna sección generó una pregunta o un "esto nos pasa", escribilo. El equipo de Zafiro lo va a leer y se va a poner en contacto con vos.
-      </p>
+      <div className="text-zafiro-text text-sm lg:text-base leading-[1.8] max-w-[48ch] mx-auto mb-10 space-y-1">
+        <p>Avda. Juan Pablo Vera esquina Arrayanes</p>
+        <p>San Fernando del Valle - Catamarca - Argentina</p>
+        <p className="mt-3">(+54-383) 453 - 8112 || (+54-383) 468 - 8195</p>
+        <p>
+          <a href="mailto:info@zafirofarmacias.com.ar" className="text-zafiro-accent hover:underline">
+            info@zafirofarmacias.com.ar
+          </a>
+        </p>
+        <p>
+          <a href="https://www.zafirofarmacias.com.ar" target="_blank" rel="noopener noreferrer" className="text-zafiro-accent hover:underline">
+            www.zafirofarmacias.com.ar
+          </a>
+        </p>
+      </div>
 
       {/* Aviso de acción requerida */}
       <div className="flex items-center gap-2 justify-center mb-10 bg-zafiro-surface border border-zafiro-dark rounded-xl px-5 py-3 max-w-[44ch] mx-auto">

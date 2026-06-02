@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { CommentsState, SectionId } from "./types";
 import { SectionHero, SectionDivider, SectionClosing } from "./components/landing";
 import {
-  Section02, Section03, Section04, Section05, Section06,
+  Section04, Section05,
   Section07, Section08, Section09, Section11,
 } from "./components/landing/sections";
 
@@ -44,25 +44,7 @@ export default function App() {
         <SectionHero />
 
         <SectionDivider />
-        <Section02 commentValue={comments[2] ?? ""} onCommentChange={(v) => setComment(2, v)} />
-
-        <SectionDivider />
-        <Section03 commentValue={comments[3] ?? ""} onCommentChange={(v) => setComment(3, v)} />
-
-        <SectionDivider />
         <Section04 commentValue={comments[4] ?? ""} onCommentChange={(v) => setComment(4, v)} />
-
-        <SectionDivider />
-        <Section05 commentValue={comments[5] ?? ""} onCommentChange={(v) => setComment(5, v)} />
-
-        <SectionDivider />
-        <Section06 commentValue={comments[6] ?? ""} onCommentChange={(v) => setComment(6, v)} />
-
-        <SectionDivider />
-        <Section07 commentValue={comments[7] ?? ""} onCommentChange={(v) => setComment(7, v)} />
-
-        <SectionDivider />
-        <Section08 commentValue={comments[8] ?? ""} onCommentChange={(v) => setComment(8, v)} />
 
         <SectionDivider />
         <Section09 commentValue={comments[9] ?? ""} onCommentChange={(v) => setComment(9, v)} />
@@ -70,6 +52,16 @@ export default function App() {
         <SectionDivider />
         <Section11 commentValue={comments[11] ?? ""} onCommentChange={(v) => setComment(11, v)} />
 
+        <SectionDivider />
+        <Section05 commentValue={comments[5] ?? ""} onCommentChange={(v) => setComment(5, v)} />
+
+        <SectionDivider />
+        <Section08 commentValue={comments[8] ?? ""} onCommentChange={(v) => setComment(8, v)} />
+
+        <SectionDivider />
+        <Section07 commentValue={comments[7] ?? ""} onCommentChange={(v) => setComment(7, v)} />
+
+        <SectionDivider />
         <SectionClosing comments={comments} />
 
         <footer className="text-center text-zafiro-dark text-xs pb-[4vh]">

@@ -8,33 +8,31 @@ interface SectionProps {
 export function Section08({ commentValue, onCommentChange }: SectionProps) {
   return (
     <SectionWrapper id="section-8">
-      <div className="flex flex-col lg:flex-row gap-12 lg:items-center">
+      <div className="flex flex-col lg:flex-row gap-12 lg:items-start">
 
-        <div className="flex-1 flex flex-col gap-8">
-          <h2 className="font-black uppercase text-zafiro-accent leading-[1.05] tracking-[-0.02em] text-[clamp(28px,4vw,56px)]">
-            Menos trabajo repetitivo,{" "}
-            <br className="hidden sm:block" />
-            más enfoque en lo valioso
-          </h2>
-
-          <div className="space-y-3 text-base lg:text-lg leading-[1.75] text-zafiro-text">
-            <p>La IA llegó para quedarse. Por eso, Zafiro integra inteligencia artificial para automatizar tareas repetitivas y liberar al equipo para enfocarse en lo que realmente importa.</p>
-            <p>El PDF llega. ZIA lo lee, identifica los productos, los precios, los descuentos, y los precarga en el sistema. El encargado revisa, confirma, y listo.</p>
-            <p>Sin tipear. Sin errores de imputación. Sin repetir lo que ya está en el documento.</p>
-            <p>No es solo tiempo liberado, es un mundo de nuevas posibilidades. Cada hora que el personal no está con tareas que pueden automatizarse, es una hora más en la que el negocio puede continuar creciendo.</p>
+        <div className="flex-1 flex flex-col gap-6">
+          <div>
+            <h2 className="font-black uppercase text-zafiro-accent leading-[1.05] tracking-[-0.02em] text-[clamp(28px,4vw,56px)]">
+              Zafiro ZIA
+            </h2>
+            <p className="text-zafiro-accent italic text-base lg:text-xl mt-2 font-light">
+              Procesos automatizados
+            </p>
           </div>
+
+          <p className="text-base lg:text-lg leading-[1.75] text-zafiro-text">
+            Automatizá el ingreso de facturas de compras y stock usando Inteligencia Artificial, con lectura directa desde PDFs o escaneos. ZIA identifica productos, precios y descuentos automáticamente, el encargado solo revisa y confirma, sin tipear nada.
+          </p>
 
           <div className="bg-zafiro-card rounded-xl px-8 py-6">
-            <p className="font-black uppercase text-zafiro-accent leading-none tracking-tight text-[clamp(28px,4vw,60px)]">
-              De 1 semana
-            </p>
-            <p className="font-black uppercase text-zafiro-accent leading-none tracking-tight text-[clamp(28px,4vw,60px)]">
-              a solo 2 horas
-            </p>
-            <p className="text-zafiro-text text-xs uppercase tracking-widest mt-3 opacity-70">
-              Este es el impacto que tuvo ZIA en uno de nuestros clientes.
+            <p className="font-black uppercase text-zafiro-accent leading-none tracking-tight text-[clamp(24px,3.5vw,48px)]">
+              -95% de tiempo en tareas poco productivas
             </p>
           </div>
+
+          <p className="text-zafiro-accent italic text-base lg:text-lg font-light">
+            La salud de tu farmacia está en la gestión
+          </p>
         </div>
 
         <div className="lg:w-[44%]">
