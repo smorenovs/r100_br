@@ -1,49 +1,46 @@
-import { SectionWrapper, CommentField } from "@/components/landing";
+import { CommentField } from "@/components/landing/CommentField";
 
 interface SectionProps {
   commentValue: string;
   onCommentChange: (v: string) => void;
 }
 
-const features = [
-  { title: "Pedidos Centralizados", desc: "Para que la compra vaya a la Central, y desde allí distribuir a las sucursales." },
-  { title: "Pedidos Distribuidos", desc: "Para que el proveedor envíe lo correspondiente a cada sucursal." },
-  { title: "Proyección de demanda con regresión lineal", desc: "Para que puedas saber cuánto comprar en base a tu historial de venta y pronósticos basados en datos históricos de tu negocio." },
-];
-
 export function Section07({ commentValue, onCommentChange }: SectionProps) {
   return (
-    <SectionWrapper id="section-7">
-      <h2 className="font-black uppercase text-zafiro-accent leading-[1.05] tracking-[-0.02em] text-[clamp(28px,4.5vw,60px)] mb-4">
-        Proceso de compras optimizado con datos reales
-      </h2>
-      <p className="text-zafiro-accent italic text-base lg:text-xl mb-12 font-light">
-        Reposición inteligente de stock, para que tu inventario no sea un problema ni un costo extra.
-      </p>
-
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {features.map(({ title, desc }) => (
-          <div key={title} className="bg-zafiro-card rounded-xl p-7">
-            <p className="font-black uppercase text-zafiro-accent text-base lg:text-lg tracking-wide mb-3">
-              {title}
-            </p>
-            <p className="text-zafiro-text text-base leading-[1.7] opacity-80">
-              {desc}
-            </p>
+    <section className="section" id="section-7" data-section data-index="06" data-screen-label="Compras">
+      <div className="section-inner">
+        <h2 className="h-title" data-reveal>
+          Proceso de compras optimizado con datos reales
+        </h2>
+        <p className="eyebrow" data-reveal>
+          Reposición inteligente de stock, para que tu inventario no sea un problema ni un costo extra.
+        </p>
+        <div className="grid grid-3" data-stagger="90" style={{ marginTop: "clamp(32px,5vh,56px)" }}>
+          <div className="card" data-reveal>
+            <p className="card-title">Pedidos Centralizados</p>
+            <p className="card-body">Para que la compra vaya a la Central, y desde allí distribuir a las sucursales.</p>
           </div>
-        ))}
-      </div>
-
-      <div className="mt-8 rounded-xl overflow-hidden min-h-[180px] lg:min-h-[220px]">
-        <img
-          src="/img_slide_7.jpg"
-          alt="Análisis de Proyección de Ventas — Zafiro"
-          className="w-full h-full object-cover object-top rounded-xl"
-          draggable={false}
+          <div className="card" data-reveal>
+            <p className="card-title">Pedidos Distribuidos</p>
+            <p className="card-body">Para que el proveedor envíe lo correspondiente a cada sucursal.</p>
+          </div>
+          <div className="card" data-reveal>
+            <p className="card-title">Proyección de demanda con regresión lineal</p>
+            <p className="card-body">Para que puedas saber cuánto comprar en base a tu historial de venta y pronósticos basados en datos históricos de tu negocio.</p>
+          </div>
+        </div>
+        <div className="window-wrap" data-reveal data-parallax="0.045" style={{ marginTop: "28px" }}>
+          <figure className="window float" style={{ margin: 0 }}>
+            <img className="shot" src="/img_slide_7.jpg" alt="Análisis de Proyección de Ventas — Zafiro" draggable={false} />
+          </figure>
+        </div>
+        <CommentField
+          sectionId={7}
+          commentLabel="Sección — Compras / Proyección"
+          value={commentValue}
+          onChange={onCommentChange}
         />
       </div>
-
-      <CommentField sectionId={7} value={commentValue} onChange={onCommentChange} />
-    </SectionWrapper>
+    </section>
   );
 }

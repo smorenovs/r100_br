@@ -1,16 +1,19 @@
-import { SectionWrapper, CommentField } from "@/components/landing";
+import { CommentField } from "@/components/landing/CommentField";
 
 interface SectionProps {
   commentValue: string;
   onCommentChange: (v: string) => void;
 }
 
-const integrations = [
+const row1 = [
   "Facturación electrónica",
   "Medios de pago",
   "Validación de Bonos y Obras Sociales",
   "Robots",
   "eCommerce",
+];
+
+const row2 = [
   "CRM",
   "Droguerías",
   "Proveedores no farmacéuticos",
@@ -19,23 +22,43 @@ const integrations = [
 
 export function Section09({ commentValue, onCommentChange }: SectionProps) {
   return (
-    <SectionWrapper id="section-9">
-      <h2 className="font-black uppercase text-zafiro-accent leading-[1.05] tracking-[-0.02em] text-[clamp(28px,4.5vw,60px)] mb-4">
-        Contamos con un potente ecosistema de integraciones
-      </h2>
-      <p className="text-zafiro-accent italic text-base lg:text-xl mb-12 font-light">
-        Lo que le funciona a tu empresa, lo conectamos y potenciamos
-      </p>
-
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3">
-        {integrations.map((name) => (
-          <div key={name} className="bg-zafiro-card rounded-xl px-5 py-4">
-            <p className="font-black uppercase text-zafiro-text text-base lg:text-xl tracking-tight leading-tight text-center">{name}</p>
-          </div>
-        ))}
+    <section className="section" id="section-9" data-section data-index="02" data-screen-label="Integraciones">
+      <div className="section-inner">
+        <h2 className="h-title" data-reveal>
+          Contamos con un potente ecosistema de integraciones
+        </h2>
+        <p className="eyebrow" data-reveal>
+          Lo que le funciona a tu empresa, lo conectamos y potenciamos
+        </p>
       </div>
-
-      <CommentField sectionId={9} value={commentValue} onChange={onCommentChange} />
-    </SectionWrapper>
+      <div style={{ marginTop: "clamp(36px,6vh,64px)" }} data-reveal>
+        <div className="marquee">
+          <div className="marquee-track">
+            {row1.map((name) => (
+              <span className="chip" key={name}>
+                <span className="ck">✓</span>{name}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="marquee rtl">
+          <div className="marquee-track">
+            {row2.map((name) => (
+              <span className="chip" key={name}>
+                <span className="ck">✓</span>{name}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="section-inner">
+        <CommentField
+          sectionId={9}
+          commentLabel="Sección — Integraciones"
+          value={commentValue}
+          onChange={onCommentChange}
+        />
+      </div>
+    </section>
   );
 }

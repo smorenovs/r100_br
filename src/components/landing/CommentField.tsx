@@ -1,53 +1,47 @@
-import { useRef, useState } from "react";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import { Textarea } from "@/components/ui/textarea";
+import { useState, useRef, useCallback } from "react";
 import type { SectionId } from "@/types";
 
 interface CommentFieldProps {
   sectionId: SectionId;
+  commentLabel: string;
   value: string;
   onChange: (value: string) => void;
 }
 
-export function CommentField({ sectionId, value, onChange }: CommentFieldProps) {
+export function CommentField({ sectionId, commentLabel, value, onChange }: CommentFieldProps) {
   const [open, setOpen] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const hasNote = value.trim().length > 0;
 
-  const handleOpenChange = (next: boolean) => {
-    setOpen(next);
-    if (next) setTimeout(() => textareaRef.current?.focus(), 150);
-  };
+  const handleToggle = useCallback(() => {
+    setOpen((prev) => {
+      const next = !prev;
+      if (next) setTimeout(() => textareaRef.current?.focus(), 160);
+      return next;
+    });
+  }, []);
+
+  const classes = [
+    "comment",
+    open ? "open" : "",
+    hasNote ? "has-note" : "",
+  ].filter(Boolean).join(" ");
 
   return (
-    <Collapsible open={open} onOpenChange={handleOpenChange} className="mt-[4vh]">
-      <CollapsibleTrigger asChild>
-        <button
-          type="button"
-          className="w-full flex items-center justify-between border border-dashed border-zafiro-dark rounded-xl px-5 py-[14px] bg-zafiro-surface hover:border-zafiro-accent transition-colors duration-150 min-h-[48px] cursor-pointer"
-        >
-          <span className="text-zafiro-accent text-sm lg:text-base font-normal text-left">
-            ¿Tenés algún comentario sobre esta sección?
-          </span>
-          <span className="text-zafiro-muted text-lg ml-4 flex-shrink-0 leading-none">
-            {open ? "−" : "+"}
-          </span>
-        </button>
-      </CollapsibleTrigger>
-
-      <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
-        <Textarea
-          ref={textareaRef}
-          id={`comment-${sectionId}`}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          placeholder="Escribí tu observación aquí…"
-          className="mt-2 bg-zafiro-bg border-zafiro-dark text-zafiro-text placeholder:text-zafiro-muted placeholder:italic focus-visible:ring-0 focus-visible:ring-offset-0 shadow-none min-h-[120px] lg:min-h-[100px] text-base resize-y"
-        />
-      </CollapsibleContent>
-    </Collapsible>
+    <div className={classes} data-comment={sectionId} data-comment-label={commentLabel} data-reveal>
+      <button type="button" className="comment-toggle" onClick={handleToggle}>
+        ¿Tenés algún comentario sobre esta sección?<span className="plus">+</span>
+      </button>
+      <div className="comment-body">
+        <div>
+          <textarea
+            ref={textareaRef}
+            placeholder="Escribí tu observación aquí…"
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+          />
+        </div>
+      </div>
+    </div>
   );
 }

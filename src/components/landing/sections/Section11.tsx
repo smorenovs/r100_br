@@ -1,36 +1,51 @@
-import { SectionWrapper, CommentField } from "@/components/landing";
+import { CommentField } from "@/components/landing/CommentField";
 
 interface SectionProps {
   commentValue: string;
   onCommentChange: (v: string) => void;
 }
 
-const stats = [
-  { title: "Multisucursal", desc: "Gestión centralizada o distribuida, desde una sola plataforma." },
-  { title: "Alta Concurrencia", desc: "Cientos de puestos operando en simultáneo, sin fricción." },
-  { title: "Escala Real", desc: "Millones de operaciones procesadas sin tener que cambiar de sistema." },
-];
-
 export function Section11({ commentValue, onCommentChange }: SectionProps) {
   return (
-    <SectionWrapper id="section-11">
-      <h2 className="font-black uppercase text-zafiro-accent leading-[1.05] tracking-[-0.02em] text-[clamp(28px,4.5vw,60px)] mb-4">
-        Listo para multisucursal desde el primer día
-      </h2>
-      <p className="text-zafiro-accent italic text-base lg:text-xl mb-12 font-light">
-        Todo tu negocio en una sola plataforma, con datos en tiempo real. Multiempresa y multisucursal
-      </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        {stats.map(({ title, desc }) => (
-          <div key={title} className="bg-zafiro-surface border border-zafiro-dark rounded-xl px-5 py-5">
-            <p className="font-black text-zafiro-accent text-xl leading-none tracking-tight mb-3">{title}</p>
-            <p className="text-zafiro-muted text-sm lg:text-base leading-[1.7]">{desc}</p>
+    <section className="section" id="section-11" data-section data-index="03" data-screen-label="Multisucursal">
+      <div className="section-inner">
+        <h2 className="h-title" data-reveal>
+          Listo para multisucursal desde el primer día
+        </h2>
+        <p className="eyebrow" data-reveal>
+          Todo tu negocio en una sola plataforma, con datos en tiempo real. Multiempresa y multisucursal
+        </p>
+        <div className="split rev" style={{ marginTop: "clamp(32px,5vh,56px)" }}>
+          <div className="grid" data-stagger="100" style={{ alignContent: "start" }}>
+            <div className="stat-card" data-reveal>
+              <p className="st-title">Multisucursal</p>
+              <p className="st-body">Gestión centralizada o distribuida, desde una sola plataforma.</p>
+            </div>
+            <div className="stat-card" data-reveal>
+              <p className="st-title">Alta Concurrencia</p>
+              <p className="st-body">Cientos de puestos operando en simultáneo, sin fricción.</p>
+            </div>
+            <div className="stat-card" data-reveal>
+              <p className="st-title">Escala Real</p>
+              <p className="st-body">Millones de operaciones procesadas sin tener que cambiar de sistema.</p>
+            </div>
           </div>
-        ))}
+          <div className="diagram-wrap" data-reveal data-parallax="0.05" style={{ display: "grid", placeItems: "center" }}>
+            <img
+              src="/img_slide_11.png"
+              alt="Arquitectura multisucursal: central, sucursales y puestos de trabajo"
+              style={{ width: "100%", maxWidth: "480px", height: "auto" }}
+              draggable={false}
+            />
+          </div>
+        </div>
+        <CommentField
+          sectionId={11}
+          commentLabel="Sección — Multisucursal / Escala"
+          value={commentValue}
+          onChange={onCommentChange}
+        />
       </div>
-
-      <CommentField sectionId={11} value={commentValue} onChange={onCommentChange} />
-    </SectionWrapper>
+    </section>
   );
 }
