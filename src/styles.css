@@ -377,11 +377,10 @@ strong { font-weight: 800; color: var(--text); }
    CLOSING
    ============================================================ */
 .closing { text-align: center; }
-/* encabezado: logo a la izquierda, titular a la derecha */
+/* encabezado: logo + titular como bloque centrado */
 .closing-head {
-  display: grid; grid-template-columns: auto 1fr; align-items: center;
+  display: inline-flex; flex-direction: row; align-items: center;
   gap: clamp(28px, 5vw, 72px); text-align: left;
-  max-width: var(--maxw); margin: 0 auto;
 }
 .closing-head .logo { width: clamp(120px, 15vw, 200px); margin: 0; }
 .closing-head h2 {
@@ -390,7 +389,7 @@ strong { font-weight: 800; color: var(--text); }
   margin: 0; max-width: 22ch; text-wrap: balance;
 }
 @media (max-width: 760px) {
-  .closing-head { grid-template-columns: 1fr; gap: 24px; text-align: center; justify-items: center; }
+  .closing-head { gap: 24px; }
   .closing-head h2 { max-width: 26ch; }
 }
 /* líneas de contacto en una sola fila */

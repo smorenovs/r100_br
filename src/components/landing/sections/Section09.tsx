@@ -34,8 +34,8 @@ export function Section09({ commentValue, onCommentChange }: SectionProps) {
       <div style={{ marginTop: "clamp(36px,6vh,64px)" }} data-reveal>
         <div className="marquee">
           <div className="marquee-track">
-            {row1.map((name) => (
-              <span className="chip" key={name}>
+            {[...row1, ...row1].map((name, i) => (
+              <span className="chip" key={i}>
                 <span className="ck">✓</span>{name}
               </span>
             ))}
@@ -43,8 +43,8 @@ export function Section09({ commentValue, onCommentChange }: SectionProps) {
         </div>
         <div className="marquee rtl">
           <div className="marquee-track">
-            {row2.map((name) => (
-              <span className="chip" key={name}>
+            {[...row2, ...row2].map((name, i) => (
+              <span className="chip" key={i}>
                 <span className="ck">✓</span>{name}
               </span>
             ))}
