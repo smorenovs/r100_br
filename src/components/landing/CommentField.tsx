@@ -28,8 +28,8 @@ export function CommentField({ sectionId, commentLabel, value, onChange }: Comme
   ].filter(Boolean).join(" ");
 
   return (
-    <div className={classes} data-comment={sectionId} data-comment-label={commentLabel} data-reveal>
-      <button type="button" className="comment-toggle" onClick={handleToggle}>
+    <div className={classes} data-comment={sectionId} data-comment-label={commentLabel}>
+      <button type="button" className="comment-toggle" onClick={handleToggle} data-reveal>
         ¿Tenés algún comentario sobre esta sección?<span className="plus">+</span>
       </button>
       <div className="comment-body">
